@@ -8,3 +8,11 @@ spec:
       image: nginx
       ports:
       - containerPort: 80
+      volumeMounts: 
+      - name: mypod-storage
+        mountPath: /usr/test
+  volumes:
+  - emptyDir: {}
+    name: mypod-storage
+   
+
